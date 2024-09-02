@@ -25,8 +25,8 @@ NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.j
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/70c306053d29595749a52.mp4")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/3c2bce2955e73e46a4484.jpg'))
 SUBSCRIPTIO = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/90c03ad2ca2fe52297d50.jpg')).split()
-CODE = (environ.get('CODE', 'https://graph.org/file/ce995209653777540f02e.jpg'))
-PAYPICS = (environ.get('PAYPICS', 'https://graph.org/file/f4db1c3ad3d9e38b328e6.jpg')).split()
+CODE = (environ.get('CODE', 'https://telegra.ph/file/1c5faa62cff19375e5431.jpg'))
+PAYPICS = (environ.get('PAYPICS', 'https://telegra.ph/file/30718b7285a1494fcbcad.jpg')).split()
 REFER_PICS = (environ.get("REFER_PICS", "https://graph.org/file/1a2e64aee3d4d10edd930.jpg")).split() 
 
 #stream link shortner
