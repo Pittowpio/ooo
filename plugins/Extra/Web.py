@@ -20,7 +20,7 @@ async def start(client, message):
     
     
     # Create referral link
-    JsWeb_link = f'{URL}jisshu/?userId={user_id}&referrer={ads_id}&userName={username}'
+   
     
     # Create InlineKeyboardMarkup with the referral link button
     reply_markup = InlineKeyboardMarkup(
