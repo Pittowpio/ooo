@@ -136,7 +136,7 @@ else:
 STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or Flase
 
 # online Stream and Download support only premium user, True or Flase
-JS_WEB_PREMIUM = is_enabled((environ.get('JS_WEB_PREMIUM', "True")), True)
+JS_WEB_PREMIUM = is_enabled((environ.get('JS_WEB_PREMIUM', "False")), False)
 
 # website themes changing (https://bootswatch.com)
 JS_THEMES = "cerulean"
