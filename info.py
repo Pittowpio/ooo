@@ -13,20 +13,20 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '25282308'))
-API_HASH = environ.get('API_HASH', '3f5c041738ce25f3942e59e809ab838a')
-BOT_TOKEN = environ.get('BOT_TOKEN', "7057888802:AAEvFAO4WXZZ4S23dTjDbltk8KqF2b3l6uE")
+API_ID = int(environ.get('API_ID', ''))
+API_HASH = environ.get('API_HASH', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/0ee164e75eec1fc399254.jpg https://telegra.ph/file/d151a079981e8a8ee2404.jpg https://telegra.ph/file/aece16d3bb16510f98e97.jpg https://telegra.ph/file/b747397caf28af38f5f58.jpg https://telegra.ph/file/0220546d89b4130a38fe8.jpg https://telegra.ph/file/cd2ab704b2df3281fbc00.jpg https://telegra.ph/file/4665b49283ea238b0cc98.jpg https://telegra.ph/file/1e5af42fdb2b98b0f1762.jpg https://telegra.ph/file/e54fc8c977956d3c2d6a8.jpg')).split() #SAMPLE PIC
+PICS = (environ.get('PICS', 'https://telegra.ph/file/1e5af42fdb2b98b0f1762.jpg https://telegra.ph/file/e54fc8c977956d3c2d6a8.jpg')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/3fc7ada7ddfc14eed5074.mp4")
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/3c2bce2955e73e46a4484.jpg'))
-SUBSCRIPTIO = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/90c03ad2ca2fe52297d50.jpg')).split()
-CODE = (environ.get('CODE', 'https://telegra.ph/file/1c5faa62cff19375e5431.jpg'))
-PAYPICS = (environ.get('PAYPICS', 'https://telegra.ph/file/30718b7285a1494fcbcad.jpg')).split()
+MELCOW_VID = environ.get("MELCOW_VID", "")
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', ''))
+SUBSCRIPTIO = (environ.get('SUBSCRIPTION', '')).split()
+CODE = (environ.get('CODE', ''))
+PAYPICS = (environ.get('PAYPICS', '')).split()
 REFER_PICS = (environ.get("REFER_PICS", "https://graph.org/file/1a2e64aee3d4d10edd930.jpg")).split() 
 
 #stream link shortner
@@ -36,7 +36,7 @@ STREAMHTO = (environ.get('STREAMHTO', ''))
 BOT_USERNAME = environ.get("BOT_USERNAME", "JISSHU_BOT")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6826356197').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002025658212 -1002020845252').split()] #Channel id for auto indexing ( make sure bot is admin )
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -45,14 +45,14 @@ auth_channel = environ.get('AUTH_CHANNEL', '') #Channel / Group Id for force sub
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002204398398') # support group id ( make sure bot is admin )
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002166127890') # request channel id ( make sure bot is admin )
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '') # support group id ( make sure bot is admin )
+reqst_channel = environ.get('REQST_CHANNEL_ID', '') # request channel id ( make sure bot is admin )
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://dipeshxyzyadav:ws1SIxbNdxfVwaSb@cluster0.b7mhopj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
@@ -76,7 +76,7 @@ CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/sakshi_fanbase')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', '🫦 𝙼𝚊𝚍𝚎 𝚋𝚢 : @𝚒𝚜𝚑𝚊_𝚍𝚊𝚕𝚟𝚒_𝚡')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001819373091')) #Log channel id ( make sure bot is admin )
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '')) #Log channel id ( make sure bot is admin )
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/isha_support') #Support group link ( make sure bot is admin )
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
